@@ -1,0 +1,136 @@
+/* General container styles */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.recorder-card {
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    color: #333;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.status-indicator {
+    width: 15px;
+    height: 15px;
+    background-color: #888;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.status-indicator.recording {
+    animation: pulse 1s infinite;
+    background-color: #ff4c4c;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.error-message, .success-message {
+    padding: 1rem;
+    border-radius: 6px;
+    margin: 1rem 0;
+}
+
+.error-message {
+    background-color: #fed7d7;
+    border: 1px solid #e53e3e;
+    color: #c53030;
+    display: none;
+}
+
+.success-message {
+    background-color: #c6f6d5;
+    border: 1px solid #38a169;
+    color: #2f855a;
+    display: none;
+}
+
+.btn {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-record {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+.btn-stop {
+    background-color: #f44336;
+    color: #fff;
+}
+
+.btn-flag {
+    background-color: #ff9800;
+    color: #fff;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+.instructions, .flagged-timestamps {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.instructions h3, .flagged-timestamps h3 {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.instructions ol, .flagged-timestamps ul {
+    padding-left: 20px;
+}
+
+.flagged-timestamps ul {
+    list-style-type: disc;
+    color: #333;
+}
+
+.flagged-timestamps li {
+    margin-bottom: 5px;
+}
+
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 3px solid #3498db;
+    animation: spin 1s linear infinite;
+    margin-right: 10px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

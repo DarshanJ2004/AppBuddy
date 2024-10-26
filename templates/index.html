@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="container">
+    <h1>🎤 Lecture Audio Recorder</h1>
+
+    <div class="status">
+        <div class="status-indicator" id="recordingIndicator"></div>
+        <span id="statusText">Ready to record</span>
+    </div>
+
+    <div id="errorMessage" class="error-message"></div>
+    <div id="successMessage" class="success-message"></div>
+
+    <div class="recorder-controls">
+        <button id="recordButton" class="btn btn-record">Start Recording</button>
+        <button id="stopButton" class="btn btn-stop">Stop Recording</button>
+        <button id="flagButton" class="btn btn-flag" disabled>Flag Timestamp</button>
+    </div>
+
+    <div id="transcription"></div>
+    <audio id="audioPlayer" controls style="display: none;"></audio>
+
+    <div class="instructions">
+        <h3>Instructions:</h3>
+        <ol>
+            <li>Click "Start Recording" to begin capturing audio.</li>
+            <li>Use the "Flag Timestamp" button to mark unclear points during recording.</li>
+            <li>Click "Stop Recording" when finished.</li>
+            <li>Your recording will automatically upload and be ready for playback.</li>
+        </ol>
+    </div>
+
+    <div class="flagged-timestamps" id="flaggedTimestampsContainer">
+        <h3>Flagged Timestamps:</h3>
+        <ul id="flaggedTimestampsList"></ul>
+    </div>
+</div>
+{% endblock %}
