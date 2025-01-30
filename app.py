@@ -5,7 +5,7 @@ app = Flask(__name__)
 UPLOAD_FOLDER = 'uploads'  # Directory to save uploaded files
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
-# Allowed audio file extensions
+# Allowed audio files
 ALLOWED_EXTENSIONS = {'mp3', 'wav', 'm4a', 'flac'}
 
 def allowed_file(filename):
